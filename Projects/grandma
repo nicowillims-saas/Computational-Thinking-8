@@ -1,0 +1,9 @@
+while True:
+    word = input ("What do you think Aadit likes? ")
+
+    if "b" in word:
+        print (f"Aadit likes {word}!")
+    else:
+        print(f"Aadit doesn't like {word}")
+
+        print ("")
