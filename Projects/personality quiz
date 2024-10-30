@@ -1,0 +1,32 @@
+
+#beginning
+xmas_points = 0
+halloween_points = 0
+
+# question 1:
+answer = input("On a cold day would you rather A) go ice skating, or B) go to a pumpkin patch")
+if answer == "A":
+	xmas_points += 1
+elif answer == "B":
+	halloween_points += 1
+
+# question 2:
+answer = input("Which song do you prefer: A) Monster Mash, or B) Frosty the Snowman?")
+if answer == "A":
+	halloween_points += 1
+elif answer == "B":
+	xmas_points += 1
+
+# question 3:
+answer = input("Which color combo do you prefer: A) Red and green, or B) Orange and Black")
+if answer == "A":
+	xmas_points += 1
+elif answer == "B":
+	halloween_points += 1
+	
+    # end of quiz:
+if xmas_points > halloween_points:
+	print("You are a Christmas person!")
+elif halloween_points > xmas_points:
+	print("You are a Halloween person!")
+
