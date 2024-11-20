@@ -12,7 +12,7 @@ stage.disable_floor()
 
 
 gameOver = False
-lives = 5
+presents = 0
 
 
 # Section 2 - Objects
@@ -32,15 +32,17 @@ stage.event_interval(falling_object, 0.5)
 # Section 3 - Collision
 
 
-def collision(, s2):
-    global lives, gameOver
+def collision(s1, s2):
+    global presents, gameOver
    
-    if s2.get_image_name() == "present.png":
-        stage.remove_sprite("s2")
-        if lives == 0:
-            print("test")
+    if s2.get_image_name() == "present":
+        stage.remove_sprite(s2)
+        if presents == 10:
+            print("you win")
+            gameOver = True
         else:
-            print("test")
+            print("you're getting close!")
+            presents+=1
              
 player.event_collision(collision)
 
